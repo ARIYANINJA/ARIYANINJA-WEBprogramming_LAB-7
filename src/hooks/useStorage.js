@@ -17,7 +17,7 @@ const useStorage = (file) => {
     }, (err) => {
       setError(err);
     }, async () => {
-      const url = await storageRef.getDownloadURL();imga
+      const url = await storageRef.getDownloadURL();  
       const createdAt = timestamp();
       await collectionRef.add({ url, createdAt });
       setUrl(url);
